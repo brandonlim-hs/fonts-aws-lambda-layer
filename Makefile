@@ -18,3 +18,11 @@ stix_fonts_layer:
 .PHONY: publish_stix_fonts_layer
 publish_stix_fonts_layer: stix_fonts_layer
 	$(call publish, fonts/stix_fonts/, "Stix fonts in AWS Lambda [https://www.stixfonts.org/]")
+
+.PHONY: amazon_linux_fonts_layer
+amazon_linux_fonts_layer:
+	$(call build, fonts/amazon_linux_fonts/)
+
+.PHONY: publish_amazon_linux_fonts_layer
+publish_amazon_linux_fonts_layer: amazon_linux_fonts_layer
+	$(call publish, fonts/amazon_linux_fonts/, "All fonts available in Amazon Linux runtime")
